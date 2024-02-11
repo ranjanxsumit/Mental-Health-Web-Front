@@ -1,0 +1,167 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(3, 46, 35, 0.34);
+
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: static;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display:inline;
+    margin: 0 20px;
+    /* position: fixed; */
+}
+
+#OtherServices{
+    padding: 15px;
+}
+
+
+a {
+    text-decoration:solid;
+    /* color: #4e2c2c; */
+} 
+
+a:visited{
+    color:#ba4f4f;
+} 
+a:hover{
+    color: #0b7792;
+}
+/* a:active{
+    color: rgb(0, 0, 0);
+} */
+
+.TeamDetails{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 5%;
+}
+
+.box{
+    padding-left: 200px;
+}
+.TeamMember{
+    background-color: #ffffff;
+    border: 2px solid black ;
+    height: 430px;
+    width: 600px;
+    border-radius: 10px;
+    margin: auto;
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    
+}
+
+.TeamImage{
+    height: 130px;
+    width: 130px;
+    margin: 20px;
+}
+
+.TeamHeading{
+    color:#2d0101;
+}
+
+.youtube{
+    margin-left: 5px;
+    margin-right: 10px;
+    padding:5px;
+    height: 150px;
+    /* width: 200px; */
+}
+
+.heroParent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.hero {
+    /* background-image: url('Background\ Resources.jpg'); */
+    height: auto;
+    background-size:auto;
+    background-size:auto;
+    color: #920b0b;
+    text-align:center;
+    padding: 30px 0;
+    
+}
+
+#Our_Services{
+    margin-top: 20px;
+    text-align: center;
+}
+.services {
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.service {
+    margin: 20px;
+}
+
+.service img {
+    width: 200px;
+    height: 140px;
+}
+
+.contact {
+    /* background-color: #f2f2f2; */
+    background-color: rgba(27, 117, 95, 0.34);
+    padding: 40px 0;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
