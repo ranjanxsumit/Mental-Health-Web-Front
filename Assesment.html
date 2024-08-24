@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessment</title>
+    <style>
+        body {
+            /* background-color: #032837dc; */
+            background-color: #40a3bfa8;
+            font-family: Arial, sans-serif;
+        }
+        #assessment {
+            /* background-color: rgb(183, 198, 198); */
+            background-color:#E6E6FA;
+            margin: auto;
+            width: 500px;
+            height: 300px;
+            padding: 20px;
+            margin-top: 130px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px #888888;
+        }
+        h1 {
+            color: #333333;
+        }
+        ul {
+            list-style-type: none;
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="assessment">
+        <h1>Assessment</h1>
+        <p id="question"></p>
+        <ul id="options"></ul>
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const questions = [
+            { question: "What is the capital of France?", options: ["Berlin", "Madrid", "Paris"], answer: "Paris" },
+            { question: "Which planet is known as the Red Planet?", options: ["Venus", "Mars", "Jupiter"], answer: "Mars" }
+        ];
+        let currentQuestion = 0;
+        const questionElement = document.getElementById("question");
+        const optionsElement = document.getElementById("options");
+        const resultElement = document.getElementById("result");
+
+        function loadQuestion() {
+            questionElement.textContent = questions[currentQuestion].question;
+            optionsElement.innerHTML = questions[currentQuestion].options.map((option, index) => 
+                `<li><input type="radio" name="answer" value="${option}"> <span>${option}</span></li>`
+            ).join("");
+        }
+
+        function checkAnswer() {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+
+            if (selectedOption) {
+                const userAnswer = selectedOption.value;
+                const correctAnswer = questions[currentQuestion].answer;
+
+                if (userAnswer === correctAnswer) {
+                    resultElement.textContent = "Correct!";
+                } else {
+                    resultElement.textContent = `Incorrect. The correct answer is: ${correctAnswer}`;
+                }
+
+                currentQuestion++;
+
+                if (currentQuestion < questions.length) {
+                    loadQuestion();
+                } else {
+                    resultElement.textContent += " Assessment Complete!";
+                }
+                
+            } else {
+                alert("Please select an answer.");
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
